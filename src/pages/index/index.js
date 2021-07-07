@@ -1,12 +1,30 @@
+import { getListAPI, removeItemAPI } from '../../apis';
+
 Page({
-  onLoad(query) {
+  data: {
+    term: '',
+    list: [],
   },
-  onReady() {
+  onLoad(query) {},
+  async onReady() {
+    my.showLoading({ content: 'Loading' });
+    const list = await getListAPI();
+    my.hideLoading();
+    this.setData({
+      list,
+    });
   },
-  onShow() {
+  onShow() {},
+  onHide() {},
+  onUnload() {},
+
+  async removeItem(id) {
+    console.log(id);
+    my.showLoading({ content: 'Loading' });
+    const list = await removeItemAPI(id);
+    my.hideLoading();
+    this.setData({
+      list,
+    });
   },
-  onHide() {
-  },
-  onUnload() {
-  }
 });

@@ -1,1 +1,22 @@
-view { }
+.container {
+  padding: 20px 25px;
+  height: 100%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.sub-title {
+  color: gray;
+}
+
+.search-input {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.empty-string {
+  margin-left: 5px;
+}

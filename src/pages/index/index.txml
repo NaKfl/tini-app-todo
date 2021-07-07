@@ -1,1 +1,21 @@
-<view>This is blank page</view>
+<view class='container'>
+  <view class='title'>Today</view>
+  <view class='sub-title'>7 Jun 2021, Wednesday</view>
+  <view>
+    <input placeholder='Search' class='search-input' />
+  </view>
+  <view class='h-full flex flex-col justify-between'>
+    <view tiki:if='{{list.length > 0}}'>
+      <view tiki:for='{{list}}'>
+        <todo-item no='{{index + 1}}' content='{{item.content}}' id='{{item.id}}' removeItem="removeItem"/>
+      </view>
+    </view>
+    <view tiki:else class='w-100 flex justify-center'>
+      <icon type="info" size="45"/>
+      <text class='empty-string'>Empty</text>
+    </view>
+  </view>
+  <view class='flex justify-center w-100'>
+    <button>Add more item</button>
+  </view>
+</view>
