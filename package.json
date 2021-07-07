@@ -1,0 +1,8 @@
+{
+  "name": "demo-blank",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "com.demo.blank",
+    "buildNumber": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "defaultTitle": "Todo List"
+  },
+  "tabBar": {
+    "items": [
+      {
+        "name": "Home",
+        "pagePath": "pages/index/index"
+      }
+    ]
+  }
+}
