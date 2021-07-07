@@ -2,8 +2,9 @@ Component({
   data: {},
   props: {},
   methods: {
-    _removeItem(e) {
-      console.log(e);
+    _removeItem() {
+      const removeItem = this.props.removeItem;
+      if (removeItem) removeItem(123);
     },
   },
 });

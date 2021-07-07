@@ -6,7 +6,7 @@
   width: 10%;
 }
 
-.content {
+.description {
   width: 80%;
 }
 

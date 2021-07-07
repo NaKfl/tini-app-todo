@@ -1,5 +1,7 @@
 <view class='flex item'>
   <view class='no'>{{no}}</view>
-  <view class='content' onTap='_removeItem'>{{content}}</view>
-  <icon class='close-btn' type="close" size="20" onTap='_removeItem'/>
+  <view class='description'>{{description}}</view>
+  <view onTap="_removeItem" class='close-btn'>
+    <icon type="close" size="20"/>
+  </view>
 </view>

@@ -2,12 +2,12 @@
   <view class='title'>Today</view>
   <view class='sub-title'>7 Jun 2021, Wednesday</view>
   <view>
-    <input placeholder='Search' class='search-input' />
+    <input placeholder='Add more item' class='add-input' value="{{inputContent}}" onConfirm="addItem" onInput="onInput" controlled="{{true}}"/>
   </view>
   <view class='h-full flex flex-col justify-between'>
     <view tiki:if='{{list.length > 0}}'>
       <view tiki:for='{{list}}'>
-        <todo-item no='{{index + 1}}' content='{{item.content}}' id='{{item.id}}' removeItem="removeItem"/>
+        <todo-item no='{{index + 1}}' description='{{item.description}}' id='{{item._id}}' removeItem="removeItem"/>
       </view>
     </view>
     <view tiki:else class='w-100 flex justify-center'>
@@ -15,7 +15,7 @@
       <text class='empty-string'>Empty</text>
     </view>
   </view>
-  <view class='flex justify-center w-100'>
+  <!-- <view class='flex justify-center w-100'>
     <button>Add more item</button>
-  </view>
+  </view> -->
 </view>

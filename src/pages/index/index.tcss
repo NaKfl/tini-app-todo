@@ -12,7 +12,7 @@
   color: gray;
 }
 
-.search-input {
+.add-input {
   margin-top: 5px;
   width: 100%;
 }
