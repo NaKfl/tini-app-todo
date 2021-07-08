@@ -1,7 +1,6 @@
 {
   "usingComponents": {
     "button": "components/button/index",
-    "tm-icon": "components/tm-icon/index",
-    "todo-item": "components/todo-item/index"
+    "todo-item": "./components/todo-item/index"
   }
 }

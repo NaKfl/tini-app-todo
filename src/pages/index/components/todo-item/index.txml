@@ -1,0 +1,10 @@
+<view class='flex item'>
+  <view class='no'>{{no}}</view>
+  <view class='description'>{{description}}</view>
+  <view onTap="_onEditItem" class='edit-btn'>
+    <icon type="setting"/>
+  </view>
+  <view onTap="_onRemoveItem" class='remove-btn'>
+    <icon type="close"/>
+  </view>
+</view>

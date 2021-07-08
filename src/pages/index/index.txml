@@ -7,7 +7,7 @@
   <view class='h-full flex flex-col justify-between'>
     <view tiki:if='{{list.length > 0}}'>
       <view tiki:for='{{list}}'>
-        <todo-item no='{{index + 1}}' description='{{item.description}}' id='{{item._id}}' removeItem="removeItem"/>
+        <todo-item no='{{index + 1}}' description='{{item.description}}' id='{{item._id}}' onRemoveItem="removeItem" onEditItem="editItem"/>
       </view>
     </view>
     <view tiki:else class='w-100 flex justify-center'>
@@ -15,7 +15,4 @@
       <text class='empty-string'>Empty</text>
     </view>
   </view>
-  <!-- <view class='flex justify-center w-100'>
-    <button>Add more item</button>
-  </view> -->
 </view>

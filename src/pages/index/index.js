@@ -20,16 +20,6 @@ Page({
     });
   },
 
-  async removeItem(id) {
-    console.log(id);
-    my.showLoading({ content: 'Loading' });
-    const list = await removeItemAPI(id);
-    my.hideLoading();
-    this.setData({
-      list,
-    });
-  },
-
   async getList() {
     my.showLoading({ content: 'Loading' });
     const { data } = await request({
@@ -54,15 +44,48 @@ Page({
     });
     my.hideLoading();
     if (success) {
-      my.showToast({
-        type: 'success',
-        content: 'Add item successfully',
-      });
       this.getList();
     } else {
       my.showToast({
         type: 'fail',
         content: 'Add item failed',
+      });
+    }
+  },
+
+  async removeItem(id) {
+    my.showLoading({ content: 'Loading' });
+    const { success } = await request({
+      path: `task/${id}`,
+      method: 'DELETE',
+    });
+    my.hideLoading();
+    if (success) {
+      this.getList();
+    } else {
+      my.showToast({
+        type: 'fail',
+        content: 'Remove item failed',
+      });
+    }
+  },
+
+  async editItem(id, description) {
+    my.showLoading();
+    const { success } = await request({
+      path: `task/${id}`,
+      method: 'PUT',
+      data: {
+        description: description,
+      },
+    });
+    my.hideLoading();
+    if (success) {
+      this.getList();
+    } else {
+      my.showToast({
+        type: 'fail',
+        content: 'Edit item failed',
       });
     }
   },

@@ -1,0 +1,20 @@
+.item {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.no {
+  width: 8%;
+}
+
+.description {
+  width: 80%;
+}
+
+.edit-btn {
+  width: 6%;
+}
+
+.remove-btn {
+  width: 6%;
+}

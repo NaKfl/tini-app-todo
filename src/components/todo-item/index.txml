@@ -1,7 +1,0 @@
-<view class='flex item'>
-  <view class='no'>{{no}}</view>
-  <view class='description'>{{description}}</view>
-  <view onTap="_removeItem" class='close-btn'>
-    <icon type="close" size="20"/>
-  </view>
-</view>
